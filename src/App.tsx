@@ -14,6 +14,8 @@ import SectionHeading from "@/components/SectionHeading";
 import { navItems, stats } from "@/constrains";
 import ExperienceCard from "@/components/ExperienceCard";
 import ProjectCard from "@/components/ProjectCard";
+import SkillGroup from "@/components/SkillGroup";
+import profileImage from "@/assets/profile.jpg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -224,13 +226,10 @@ function App() {
             {/* Profile Image */}
             <div className="relative mx-auto w-full max-w-[430px] lg:mx-0">
               <div className="absolute -inset-7 rounded-[40px] bg-gradient-to-br from-orange-300/25 via-red-200/20 to-transparent blur-3xl dark:from-orange-700/10" />
-
               <div className="relative overflow-hidden rounded-[22px] border border-black/[0.08] bg-[#eeeae5] shadow-[0_25px_60px_rgba(88,54,40,0.14)] dark:border-white/[0.08] dark:bg-[#292421]">
-                <img
-                  src="/profile.jpg"
+                <img src={profileImage}
                   alt="Manojkumar S"
-                  className="aspect-[1/1] w-full object-cover object-top"
-                />
+                  className="aspect-[1/1] w-full object-cover object-top" loading="lazy" />
               </div>
             </div>
           </div>
@@ -498,32 +497,5 @@ function App() {
   );
 }
 
-
-
-function SkillGroup({
-  title,
-  skills,
-}: {
-  title: string;
-  skills: string[];
-}) {
-  return (
-    <div className="rounded-[18px] border border-black/[0.08] bg-white/60 p-6 dark:border-white/[0.08] dark:bg-white/[0.025]">
-      <h3 className="text-[17px] font-bold">{title}</h3>
-
-      <div className="mt-5 space-y-2.5">
-        {skills.map((skill) => (
-          <div
-            key={skill}
-            className="flex items-center gap-2 text-[13px] text-[#706963] dark:text-[#aaa39d]"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#e85a25]" />
-            {skill}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default App;
