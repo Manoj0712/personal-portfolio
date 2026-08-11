@@ -19,3 +19,7 @@ export interface ProjectCardProps {
   description: string;
   technologies: string[];
 }
+export interface SkillGroupProps {
+  title: string;
+  skills: string[];
+}

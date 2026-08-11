@@ -11,11 +11,12 @@ import {
 } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import SectionHeading from "@/components/SectionHeading";
-import { navItems, stats } from "@/constrains";
+import { experienceCard, navItems, projectCard, skillGroup, stats } from "@/constrains";
 import ExperienceCard from "@/components/ExperienceCard";
 import ProjectCard from "@/components/ProjectCard";
 import SkillGroup from "@/components/SkillGroup";
 import profileImage from "@/assets/profile.jpg";
+import { map } from "lodash";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -265,33 +266,17 @@ function App() {
           />
 
           <div className="mt-12 space-y-4">
-            <ExperienceCard
-              company="Elumitas India"
-              role="Frontend Developer"
-              period="2023 — Present"
-              description="Migrating legacy Angular applications to React 18 and TypeScript, building reusable components, data-heavy dashboards and scalable frontend architecture."
-              technologies={[
-                "React",
-                "TypeScript",
-                "React Query",
-                "Redux Toolkit",
-                "Tailwind CSS",
-              ]}
-            />
 
-            <ExperienceCard
-              company="Vyoog Information Private Limited"
-              role="Software Developer"
-              period="2021 — 2023"
-              description="Worked on ERP-based enterprise applications and optimized backend workflows, PostgreSQL reporting queries and legacy Groovy/Grails applications."
-              technologies={[
-                "Java",
-                "Groovy",
-                "Grails",
-                "PostgreSQL",
-                "Spring Boot",
-              ]}
-            />
+            {map(experienceCard, (experience, index) => (
+              <ExperienceCard
+                key={experience.company + index}
+                company={experience.company}
+                role={experience.role}
+                period={experience.period}
+                description={experience.description}
+                technologies={experience.technologies}
+              />
+            ))}
           </div>
         </section>
 
@@ -308,54 +293,15 @@ function App() {
             />
 
             <div className="mt-12 grid gap-5 md:grid-cols-2">
-              <ProjectCard
-                number="01"
-                title="Personal Finance Management"
-                description="A complete finance platform for tracking transactions, budgets, savings goals, EMIs and financial insights."
-                technologies={[
-                  "React",
-                  "TypeScript",
-                  "Node.js",
-                  "PostgreSQL",
-                  "Tailwind",
-                ]}
-              />
-
-              <ProjectCard
-                number="02"
-                title="Executive Insights"
-                description="Interactive business dashboards for visualizing country-wide transactions, budgets and executive-level insights."
-                technologies={[
-                  "React",
-                  "Plotly.js",
-                  "React Query",
-                  "PostgreSQL",
-                ]}
-              />
-
-              <ProjectCard
-                number="03"
-                title="E-commerce Platform"
-                description="Full-stack commerce application with product listing, server-side rendering, APIs and PostgreSQL data management."
-                technologies={[
-                  "Next.js",
-                  "Node.js",
-                  "Express",
-                  "PostgreSQL",
-                ]}
-              />
-
-              <ProjectCard
-                number="04"
-                title="Angular → React Migration"
-                description="Modernized a legacy Angular application into React 18 with TypeScript and reusable component architecture."
-                technologies={[
-                  "React 18",
-                  "TypeScript",
-                  "React Query",
-                  "Redux",
-                ]}
-              />
+              {map(projectCard, (project, index) => {
+                return <ProjectCard
+                  key={`projectCard + ${index}`}
+                  number={project.number}
+                  title={project.title}
+                  description={project.description}
+                  technologies={project.technologies}
+                />
+              })}
             </div>
           </div>
         </section>
@@ -372,52 +318,13 @@ function App() {
           />
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <SkillGroup
-              title="Frontend"
-              skills={[
-                "React.js",
-                "TypeScript",
-                "JavaScript",
-                "Next.js",
-                "Tailwind CSS",
-                "React Query",
-              ]}
-            />
-
-            <SkillGroup
-              title="Backend"
-              skills={[
-                "Node.js",
-                "Express.js",
-                "Spring Boot",
-                "Java",
-                "Groovy",
-                "REST APIs",
-              ]}
-            />
-
-            <SkillGroup
-              title="Database"
-              skills={[
-                "PostgreSQL",
-                "MySQL",
-                "Redis",
-                "Supabase",
-                "Chroma DB",
-              ]}
-            />
-
-            <SkillGroup
-              title="Tools & AI"
-              skills={[
-                "Git",
-                "GitHub",
-                "Docker",
-                "RAG",
-                "LangChain",
-                "MCP",
-              ]}
-            />
+            {map(skillGroup, (group, index) => (
+              <SkillGroup
+                key={group.title + index}
+                title={group.title}
+                skills={group.skills}
+              />
+            ))}
           </div>
         </section>
 
