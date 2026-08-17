@@ -1,8 +1,6 @@
 import { HeaderProps } from "@/types";
 import Navigation from "../Navigation";
 import { FiSun, FiMoon, FiX, FiMenu } from "react-icons/fi";
-import { map } from "lodash";
-import { navItems } from "@/constrains";
 import NavItems from "../Navigation/NavItems";
 import HireMeButton from "./HiremeButton";
 
