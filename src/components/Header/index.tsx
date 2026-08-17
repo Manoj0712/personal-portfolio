@@ -12,7 +12,6 @@ const Header = ({
   setMobileMenu
 }: HeaderProps) => {
 
-
   return (
     <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-[#faf9f7]/80 backdrop-blur-xl dark:border-white/[0.06] dark:bg-[#171412]/80">
       <div className="mx-auto flex h-[76px] max-w-[1160px] items-center justify-between px-5 sm:px-8 lg:px-0">
@@ -21,7 +20,7 @@ const Header = ({
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="text-[20px] font-bold tracking-[-0.04em]"
         >
-          manoj<span className="text-[#ed5b22]">.dev</span>
+          manojkumar<span className="text-[#ed5b22]">.dev</span>
         </button>
         <Navigation scrollToSection={scrollToSection} />
         {/* Desktop Actions */}
