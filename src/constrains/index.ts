@@ -135,3 +135,12 @@ export const skillGroup: SkillGroupProps[] = [
     ]
   }
 ]
+
+export const professionalLinks = [{
+  name: "GitHub",
+  url: "https://github.com/Manoj0712"
+},
+{
+  name: "LinkedIn",
+  url: "https://www.linkedin.com/in/manojkumar-sakthivel-358214271"
+}]

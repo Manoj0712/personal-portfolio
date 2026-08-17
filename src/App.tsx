@@ -1,22 +1,19 @@
 import { useState } from "react";
 import {
   FiArrowUpRight,
-  FiChevronDown,
   FiMail,
-  FiMapPin,
-  FiMenu,
-  FiMoon,
-  FiSun,
-  FiX,
+  FiMapPin
 } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import SectionHeading from "@/components/SectionHeading";
-import { experienceCard, navItems, projectCard, skillGroup, stats } from "@/constrains";
+import { experienceCard, projectCard, skillGroup, stats } from "@/constrains";
 import ExperienceCard from "@/components/ExperienceCard";
 import ProjectCard from "@/components/ProjectCard";
 import SkillGroup from "@/components/SkillGroup";
 import profileImage from "@/assets/profile.jpg";
 import { map } from "lodash";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -36,116 +33,13 @@ function App() {
       className={`min-h-screen transition-colors duration-300 ${darkMode ? "bg-[#171412] text-white" : "bg-[#faf9f7] text-[#171513]"
         }`}
     >
-      {/* Background Grid */}
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div
-          className={`absolute inset-0 ${darkMode ? "opacity-[0.035]" : "opacity-[0.045]"
-            }`}
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, #777 1px, transparent 1px),
-              linear-gradient(to bottom, #777 1px, transparent 1px)
-            `,
-            backgroundSize: "68px 68px",
-          }}
-        />
-
-        <div
-          className={`absolute left-1/2 top-[-300px] h-[700px] w-[800px] -translate-x-1/2 rounded-full blur-[120px] ${darkMode ? "bg-orange-700/10" : "bg-orange-300/25"
-            }`}
-        />
-      </div>
-
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-[#faf9f7]/80 backdrop-blur-xl dark:border-white/[0.06] dark:bg-[#171412]/80">
-        <div className="mx-auto flex h-[76px] max-w-[1160px] items-center justify-between px-5 sm:px-8 lg:px-0">
-          {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-[20px] font-bold tracking-[-0.04em]"
-          >
-            manoj<span className="text-[#ed5b22]">.dev</span>
-          </button>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 md:flex">
-            {navItems.map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-[14px] font-medium text-[#706b66] transition hover:text-[#ed5b22] dark:text-[#aaa39d] dark:hover:text-[#ed6a35]"
-              >
-                {item}
-              </button>
-            ))}
-          </nav>
-
-          {/* Desktop Actions */}
-          <div className="hidden items-center gap-2 md:flex">
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="flex h-11 w-11 items-center justify-center rounded-[14px] border border-black/[0.09] transition hover:bg-black/[0.04] dark:border-white/[0.1] dark:hover:bg-white/[0.05]"
-              aria-label="Toggle theme"
-            >
-              {darkMode ? (
-                <FiSun size={18} strokeWidth={1.8} />
-              ) : (
-                <FiMoon size={18} strokeWidth={1.8} />
-              )}
-            </button>
-
-            <button
-              onClick={() => scrollToSection("Contact")}
-              className="ml-1 rounded-[13px] bg-gradient-to-r from-[#f65c20] to-[#bd484a] px-5 py-3 text-[14px] font-semibold text-white shadow-[0_8px_25px_rgba(215,75,45,0.18)] transition hover:-translate-y-[1px] hover:shadow-[0_12px_30px_rgba(215,75,45,0.25)]"
-            >
-              Hire me
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenu(!mobileMenu)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-black/[0.09] md:hidden dark:border-white/[0.1]"
-            aria-label="Open menu"
-          >
-            {mobileMenu ? <FiX size={21} /> : <FiMenu size={21} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenu && (
-          <div className="border-t border-black/[0.06] bg-[#faf9f7] px-5 py-5 dark:border-white/[0.06] dark:bg-[#171412] md:hidden">
-            <nav className="flex flex-col gap-1">
-              {navItems.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="rounded-xl px-4 py-3 text-left text-[15px] font-medium text-[#615c57] hover:bg-black/[0.04] hover:text-[#ed5b22] dark:text-[#b4aea8] dark:hover:bg-white/[0.04]"
-                >
-                  {item}
-                </button>
-              ))}
-
-              <div className="mt-3 flex gap-2 border-t border-black/[0.06] pt-4 dark:border-white/[0.06]">
-                <button
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-black/[0.09] py-3 text-sm dark:border-white/[0.1]"
-                >
-                  {darkMode ? <FiSun size={17} /> : <FiMoon size={17} />}
-                  {darkMode ? "Light mode" : "Dark mode"}
-                </button>
-
-                <button
-                  onClick={() => scrollToSection("Contact")}
-                  className="flex-1 rounded-xl bg-[#d95338] py-3 text-sm font-semibold text-white"
-                >
-                  Hire me
-                </button>
-              </div>
-            </nav>
-          </div>
-        )}
-      </header>
+      <Header
+        scrollToSection={scrollToSection}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+        mobileMenu={mobileMenu}
+        setMobileMenu={setMobileMenu} />
 
       <main>
         {/* Hero */}
@@ -367,39 +261,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-black/[0.06] dark:border-white/[0.06]">
-        <div className="mx-auto flex max-w-[1160px] flex-col items-center justify-between gap-4 px-5 py-7 text-[13px] text-[#77716b] sm:px-8 md:flex-row lg:px-0 dark:text-[#99928c]">
-          <p>© {new Date().getFullYear()} Manojkumar S. All rights reserved.</p>
-
-          <div className="flex items-center gap-2">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg p-2 transition hover:bg-black/[0.04] dark:hover:bg-white/[0.05]"
-            >
-              <FaGithub size={17} />
-            </a>
-
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg p-2 transition hover:bg-black/[0.04] dark:hover:bg-white/[0.05]"
-            >
-              <FaLinkedinIn size={17} />
-            </a>
-
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="ml-2 flex items-center gap-1 rounded-lg px-3 py-2 transition hover:bg-black/[0.04] dark:hover:bg-white/[0.05]"
-            >
-              Back to top
-              <FiChevronDown className="rotate-180" size={15} />
-            </button>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

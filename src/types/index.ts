@@ -23,3 +23,11 @@ export interface SkillGroupProps {
   title: string;
   skills: string[];
 }
+
+export interface HeaderProps {
+  scrollToSection: (section: string) => void;
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
+  mobileMenu: boolean;
+  setMobileMenu: (mobileMenu: boolean) => void;
+}
