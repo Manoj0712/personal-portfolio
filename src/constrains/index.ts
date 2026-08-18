@@ -1,5 +1,26 @@
 import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types";
+import profileImage from "@/assets/profile.jpg"
 
+export const details = {
+  name: "Manojkumar S",
+  role: "Full Stack Developer",
+  availability: "Available for new opportunities",
+  description: `I build scalable, high-performance web applications — React
+            and TypeScript on the front, Node.js, Spring Boot and
+            PostgreSQL behind them.`,
+  location: "Tiruppur, Tamil Nadu 641670, India",
+  viewProjects: "View projects",
+  getInTouch: "Get in touch",
+  image: profileImage,
+  letsBuildSomething: "Let's build something great together.",
+  greatTogether: "great together.",
+  openToOpportunities: "I'm open to frontend and full-stack opportunities. If you have an interesting project or role, I'd love to hear from you.",
+  sayhello: "Say hello",
+  mail: "manojkumars435980@gmail.com"
+}
+
+export const backeToTop = "Back to top";
+export const rights = `© ${new Date().getFullYear()} Manojkumar S. All rights reserved.`;
 export const navItems = ["About", "Experience", "Projects", "Skills", "Contact"];
 
 export const stats = [
@@ -31,7 +52,9 @@ export const experienceCard: ExperienceCardProps[] = [{
     "TypeScript",
     "React Query",
     "Redux Toolkit",
-    "Tailwind CSS",
+    "tylertech/forge",
+    "Boostrap",
+    "css"
   ],
 },
 {
@@ -61,16 +84,6 @@ export const projectCard: ProjectCardProps[] = [{
   ],
 }, {
   number: "02",
-  title: "Executive Insights",
-  description: "Interactive business dashboards for visualizing country-wide transactions, budgets and executive-level insights.",
-  technologies: [
-    "React",
-    "Plotly.js",
-    "React Query",
-    "PostgreSQL",
-  ]
-}, {
-  number: "03",
   title: "E-commerce Platform",
   description: "Full-stack commerce application with product listing, server-side rendering, APIs and PostgreSQL data management.",
   technologies: [
@@ -78,16 +91,6 @@ export const projectCard: ProjectCardProps[] = [{
     "Node.js",
     "Express",
     "PostgreSQL",
-  ]
-}, {
-  number: "04",
-  title: "Angular → React Migration",
-  description: "Modernized a legacy Angular application into React 18 with TypeScript and reusable component architecture.",
-  technologies: [
-    "React 18",
-    "TypeScript",
-    "React Query",
-    "Redux",
   ]
 }];
 

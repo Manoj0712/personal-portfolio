@@ -15,9 +15,7 @@ const ExperienceSection = () => {
         title="Building products that scale."
         description="4+ years of experience building enterprise applications, dashboards and modern web products."
       />
-
       <div className="mt-12 space-y-4">
-
         {map(experienceCard, (experience, index) => (
           <ExperienceCard
             key={experience.company + index}
@@ -30,7 +28,6 @@ const ExperienceSection = () => {
         ))}
       </div>
     </section>
-
   )
 }
 

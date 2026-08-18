@@ -9,7 +9,7 @@ const ProjectCard = ({
   technologies,
 }: ProjectCardProps) => {
   return (
-    <article className="group relative overflow-hidden rounded-[20px] border border-black/[0.08] bg-white/65 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(50,35,25,0.07)] dark:border-white/[0.08] dark:bg-white/[0.025]">
+    <div className="group relative overflow-hidden rounded-[20px] border border-black/[0.08] bg-white/65 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(50,35,25,0.07)] dark:border-white/[0.08] dark:bg-white/[0.025]">
       <div className="flex items-start justify-between">
         <span className="text-[12px] font-bold tracking-[0.15em] text-[#e65b25]">
           {number}
@@ -39,7 +39,7 @@ const ProjectCard = ({
           </span>
         ))}
       </div>
-    </article>
+    </div>
   );
 }
 

@@ -16,7 +16,6 @@ const ProjectsSection = () => {
           title="Things I've built."
           description="Selected projects focused on performance, usability and scalable architecture."
         />
-
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {map(projectCard, (project, index) => {
             return <ProjectCard
@@ -30,9 +29,7 @@ const ProjectsSection = () => {
         </div>
       </div>
     </section>
-
   )
-
 }
 
 export default ProjectsSection;

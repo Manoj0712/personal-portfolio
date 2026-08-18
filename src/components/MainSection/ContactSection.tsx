@@ -1,3 +1,4 @@
+import { details } from "@/constrains";
 import { FiMail } from "react-icons/fi";
 
 const ContactSection = () => {
@@ -16,33 +17,28 @@ const ContactSection = () => {
 
           <div className="relative">
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#e85b24]">
-              Get in touch
+              {details.getInTouch}
             </span>
 
             <h2 className="mt-4 text-[38px] font-bold tracking-[-0.045em] sm:text-[52px] text-white">
-              Let's build something
-              <span className="block text-[#df5730]">great together.</span>
+              {details.letsBuildSomething}
+              <span className="block text-[#df5730]">{details.greatTogether}</span>
             </h2>
-
             <p className="mx-auto mt-5 max-w-[580px] text-[16px] leading-7 text-[#716962] dark:text-[#aaa39d]">
-              I'm open to frontend and full-stack opportunities. If you
-              have an interesting project or role, I'd love to hear from
-              you.
+              {details.openToOpportunities}
             </p>
-
             <a
-              href="mailto:your.email@example.com"
+              href={`mailto:${details.mail}`}
               className="mt-8 inline-flex items-center gap-3 rounded-[14px] bg-[#d95338] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-500/10 transition hover:-translate-y-0.5 hover:bg-[#c94b32]"
             >
               <FiMail size={18} />
-              Say hello
+              {details.sayhello}
             </a>
           </div>
         </div>
       </div>
     </section>
   )
-
 }
 
 export default ContactSection;

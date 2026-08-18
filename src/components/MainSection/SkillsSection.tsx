@@ -15,7 +15,6 @@ const SkillsSection = () => {
         title="My technical toolkit."
         description="A practical stack focused on building reliable, maintainable production applications."
       />
-
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {map(skillGroup, (group, index) => (
           <SkillGroup
@@ -26,7 +25,6 @@ const SkillsSection = () => {
         ))}
       </div>
     </section>
-
   )
 }
 
