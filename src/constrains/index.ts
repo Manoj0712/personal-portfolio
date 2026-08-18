@@ -24,7 +24,7 @@ export const stats = [
 export const experienceCard: ExperienceCardProps[] = [{
   company: "Elumitas India",
   role: "Frontend Developer",
-  period: "2023 — Present",
+  period: "Mar 2025 — Apr 2026",
   description: "Migrating legacy Angular applications to React 18 and TypeScript, building reusable components, data-heavy dashboards and scalable frontend architecture.",
   technologies: [
     "React",
@@ -37,7 +37,7 @@ export const experienceCard: ExperienceCardProps[] = [{
 {
   company: "Vyoog Information Private Limited",
   role: "Software Developer",
-  period: "2021 — 2023",
+  period: "Nav 2021 — Mar 2025",
   description: "Worked on ERP-based enterprise applications and optimized backend workflows, PostgreSQL reporting queries and legacy Groovy/Grails applications.",
   technologies: [
     "Java",

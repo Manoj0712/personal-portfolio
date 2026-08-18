@@ -31,3 +31,18 @@ export interface HeaderProps {
   mobileMenu: boolean;
   setMobileMenu: (mobileMenu: boolean) => void;
 }
+
+export interface MobileNavigationProps {
+  scrollToSection: (section: string) => void;
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
+  mobileMenu: boolean;
+}
+
+export interface DeskTopActionsProps {
+  scrollToSection: (section: string) => void;
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
+  mobileMenu: boolean;
+  setMobileMenu: (mobileMenu: boolean) => void;
+}
