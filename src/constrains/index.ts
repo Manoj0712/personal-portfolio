@@ -46,22 +46,41 @@ export const experienceCard: ExperienceCardProps[] = [{
   company: "Elumitas India",
   role: "Frontend Developer",
   period: "Mar 2025 — Apr 2026",
-  description: "Migrating legacy Angular applications to React 18 and TypeScript, building reusable components, data-heavy dashboards and scalable frontend architecture.",
+  location: "Coimbatore",
+  description: `Migrated a legacy Angular application to React 18 and TypeScript, introducing a modern frontend architecture with reusable components and scalable state-management patterns.
+Improved initial application load time by approximately 35% and reduced unnecessary re-renders through component architecture and frontend performance optimization.
+Built interactive analytics dashboards using Plotly.js, including bar charts, pie charts, line charts, and data tables for analyzing large transaction datasets.
+Implemented financial-year-wise filters and dynamic data filtering to help users analyze business and transaction data across different reporting periods.
+Developed drill-down workflows and detail pages, allowing users to move from high-level dashboard metrics to detailed transaction-level information.
+Improved application performance by approximately 30% using React Query for API caching and background synchronization.
+Used Redux Toolkit for centralized state management and predictable data flow across complex dashboard workflows.
+Integrated Node.js and Express.js REST APIs for data retrieval, API communication, and frontend feature development.
+Created reusable visualization and dashboard components to improve maintainability, scalability, and development efficiency.
+Used AI-assisted development tools including GitHub Copilot, ChatGPT, Codex, and Claude to improve coding efficiency, debugging, and development productivity.`,
   technologies: [
     "React",
     "TypeScript",
+    "Plotly.js",
     "React Query",
     "Redux Toolkit",
-    "tylertech/forge",
+    "tylertech/forge / UI Components",
     "Boostrap",
-    "css"
+    "CSS"
   ],
 },
 {
   company: "Vyoog Information Private Limited",
   role: "Software Developer",
   period: "Nav 2021 — Mar 2025",
-  description: "Worked on ERP-based enterprise applications and optimized backend workflows, PostgreSQL reporting queries and legacy Groovy/Grails applications.",
+  location: "Coimbatore",
+  description: `Developed and maintained enterprise
+   ERP applications using Groovy, Grails, PostgreSQL,
+  and Java-based technologies.Designed and optimized 
+    backend workflows, reporting queries, and database operations,
+  reducing PostgreSQL query execution time by ~25 %.Contributed to
+     the modernization of legacy applications by migrating backend 
+     functionality toward Spring Boot and improving application performance
+      and maintainability.`,
   technologies: [
     "Java",
     "Groovy",

@@ -1,18 +1,15 @@
-import { ExperienceCardProps } from "@/types/index.ts";
+import { ExperienceCard } from "@/types/index.ts";
 
 const ExperienceCard = ({
-  company,
-  role,
-  period,
-  description,
-  technologies,
-}: ExperienceCardProps) => {
+  experienceDetails
+}: ExperienceCard) => {
+  const { company, role, period, location, description, technologies } = experienceDetails
 
   return (
     <article className="rounded-[20px] border border-black/[0.08] bg-white/65 p-6 transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(50,35,25,0.06)] sm:p-8 dark:border-white/[0.08] dark:bg-white/[0.025]">
       <div className="flex flex-col justify-between gap-3 sm:flex-row">
         <div>
-          <h3 className="text-[21px] font-bold">{company}</h3>
+          <h3 className="text-[21px] font-bold">{`${company} - ${location}`}</h3>
           <p className="mt-1 text-[14px] font-medium text-[#e25727]">
             {role}
           </p>

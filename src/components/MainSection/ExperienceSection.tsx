@@ -19,11 +19,7 @@ const ExperienceSection = () => {
         {map(experienceCard, (experience, index) => (
           <ExperienceCard
             key={experience.company + index}
-            company={experience.company}
-            role={experience.role}
-            period={experience.period}
-            description={experience.description}
-            technologies={experience.technologies}
+            experienceDetails={experience}
           />
         ))}
       </div>

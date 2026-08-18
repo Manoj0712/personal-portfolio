@@ -3,8 +3,12 @@ export interface ExperienceCardProps {
   company: string;
   role: string;
   period: string;
+  location: string;
   description: string;
   technologies: string[];
+}
+export interface ExperienceCard {
+  experienceDetails: ExperienceCardProps
 }
 
 export interface SectionHeadingprops {
