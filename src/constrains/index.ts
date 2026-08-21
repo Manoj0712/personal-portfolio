@@ -1,17 +1,25 @@
 import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types";
-import profileImage from "@/assets/profile.jpg"
+// import profileImage from "@/assets/profile.jpg"
+import ManojImage from "@/assets/ManojImage.png"
 
 export const details = {
   name: "Manojkumar S",
   role: "Full Stack Developer",
-  availability: "Available for new opportunities",
-  description: `I build scalable, high-performance web applications — React
-            and TypeScript on the front, Node.js, Spring Boot and
-            PostgreSQL behind them.`,
+  availability: "",//"Available for new opportunities",
+  description: `I’m a Full Stack Developer with 4+ years of experience building scalable,
+   high-performance web applications and data-driven experiences. 
+   I specialize in React, TypeScript, and JavaScript, with strong expertise 
+   in creating modern, responsive interfaces and interactive visualizations 
+   using Plotly.js. On the backend, I work with Node.js, Express.js, Java, and
+    Spring Boot, building reliable APIs and business-driven applications backed by 
+    PostgreSQL, MySQL, and MongoDB. I enjoy transforming complex requirements into
+     clean, intuitive, and scalable solutions while continuously improving 
+     application performance, maintainability, and user experience.
+`,
   location: "Tiruppur, Tamil Nadu 641670, India",
   viewProjects: "View projects",
   getInTouch: "Get in touch",
-  image: profileImage,
+  image: ManojImage,
   letsBuildSomething: "Let's build something great together.",
   greatTogether: "great together.",
   openToOpportunities: "I'm open to frontend and full-stack opportunities. If you have an interesting project or role, I'd love to hear from you.",

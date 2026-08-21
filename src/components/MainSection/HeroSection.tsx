@@ -16,10 +16,12 @@ const HeroSection = ({ scrollToSection }:
         {/* Left */}
         <div>
           {/* Availability */}
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-black/[0.09] bg-white/50 px-3.5 py-1.5 text-[12px] font-medium tracking-wide text-[#706a64] dark:border-white/[0.1] dark:bg-white/[0.03] dark:text-[#aaa39d]">
-            <span className="h-2 w-2 rounded-full bg-[#e85c22]" />
-            {details.availability}
-          </div>
+          {details.availability && (
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-black/[0.09] bg-white/50 px-3.5 py-1.5 text-[12px] font-medium tracking-wide text-[#706a64] dark:border-white/[0.1] dark:bg-white/[0.03] dark:text-[#aaa39d]">
+              <span className="h-2 w-2 rounded-full bg-[#e85c22]" />
+              {details.availability}
+            </div>
+          )}
 
           {/* Heading */}
           <h1 className="max-w-[760px] text-[48px] font-bold leading-[0.98] tracking-[-0.055em] sm:text-[64px] lg:text-[68px]">
@@ -30,9 +32,9 @@ const HeroSection = ({ scrollToSection }:
           </h1>
 
           {/* Description */}
-          <p className="mt-8 max-w-[610px] text-[17px] leading-[1.8] text-[#69635d] sm:text-[18px] dark:text-[#aaa39d]">
+          <h6 className="mt-8 max-w-[610px] text-[17px] leading-[1.8]  sm:text-[20px]">
             {details.description}
-          </p>
+          </h6>
 
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap items-center gap-3">
