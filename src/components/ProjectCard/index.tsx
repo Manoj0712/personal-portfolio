@@ -25,7 +25,7 @@ const ProjectCard = ({
         {title}
       </h3>
 
-      <p className="mt-3 text-[14px] leading-7 text-[#706963] dark:text-[#aaa39d]">
+      <p className="mt-3 text-[14px] leading-7">
         {description}
       </p>
 
@@ -33,7 +33,7 @@ const ProjectCard = ({
         {technologies.map((technology) => (
           <span
             key={technology}
-            className="rounded-full border border-black/[0.07] px-3 py-1.5 text-[11px] font-medium text-[#706963] dark:border-white/[0.08] dark:text-[#aaa39d]"
+            className="rounded-full border border-black/[0.07] px-3 py-1.5 text-[11px] font-medium  dark:border-white/[0.08]"
           >
             {technology}
           </span>

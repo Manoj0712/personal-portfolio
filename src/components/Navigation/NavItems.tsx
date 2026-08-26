@@ -6,7 +6,7 @@ const NavItems = ({ scrollToSection }: { scrollToSection: (section: string) => v
       <button
         key={item}
         onClick={() => scrollToSection(item)}
-        className="text-[14px] font-medium text-[#706b66] transition hover:text-[#ed5b22] dark:text-[#aaa39d] dark:hover:text-[#ed6a35]"
+        className="text-[14px] font-medium transition hover:text-[#ed5b22] dark:hover:text-[#ed6a35]"
       >
         {item}
       </button>

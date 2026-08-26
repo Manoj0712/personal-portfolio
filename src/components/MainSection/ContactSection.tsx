@@ -24,7 +24,7 @@ const ContactSection = () => {
               {details.letsBuildSomething}
               <span className="block text-[#df5730]">{details.greatTogether}</span>
             </h2>
-            <p className="mx-auto mt-5 max-w-[580px] text-[16px] leading-7 text-[#716962] dark:text-[#aaa39d]">
+            <p className="mx-auto mt-5 max-w-[580px] text-[16px] leading-7">
               {details.openToOpportunities}
             </p>
             <a

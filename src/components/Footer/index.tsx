@@ -4,7 +4,7 @@ import { backeToTop, rights } from "@/constrains";
 
 const Footer = () => {
   return <footer className="border-t border-black/[0.06] dark:border-white/[0.06]">
-    <div className="mx-auto flex max-w-[1160px] flex-col items-center justify-between gap-4 px-5 py-7 text-[13px] text-[#77716b] sm:px-8 md:flex-row lg:px-0 dark:text-[#99928c]">
+    <div className="mx-auto flex max-w-[1160px] flex-col items-center justify-between gap-4 px-5 py-7 text-[13px] sm:px-8 md:flex-row lg:px-0">
       <p>© {rights}</p>
       <div className="flex items-center gap-2">
         <ProfessionalLinks />

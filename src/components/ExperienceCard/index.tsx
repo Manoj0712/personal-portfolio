@@ -20,7 +20,7 @@ const ExperienceCard = ({
         </span>
       </div>
 
-      <p className="mt-5 max-w-[850px] text-[15px] leading-7 text-[#706963] dark:text-[#aaa39d]">
+      <p className="mt-5 max-w-[850px] text-[15px] leading-7">
         {description}
       </p>
 

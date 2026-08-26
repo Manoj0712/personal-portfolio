@@ -1,5 +1,4 @@
 import { FiArrowUpRight, FiMail, FiMapPin } from "react-icons/fi"
-import profileImage from "@/assets/profile.jpg"
 import ProfessionalLinks from "../ProfessonalLinks"
 import Stats from "./Stats"
 import { details } from "@/constrains"
@@ -12,17 +11,21 @@ const HeroSection = ({ scrollToSection }:
       id="about"
       className="relative mx-auto max-w-[1160px] px-5 pb-16 pt-20 sm:px-8 sm:pt-28 lg:px-0 lg:pb-20 lg:pt-[115px]"
     >
-      <div className="grid items-center gap-14 lg:grid-cols-[1fr_430px] lg:gap-20">
+      <div className="grid items-center gap-14 lg:grid-cols-[1fr_430px] lg:gap-20 hover:-translate-y-0.5 hover:z-30 hover:border-black/[0.15]
+      relative z-10 rounded-[20px] border border-transparent p-4 transition-all duration-300
+      ">
         {/* Left */}
         <div>
           {/* Availability */}
           {details.availability && (
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-black/[0.09] bg-white/50 px-3.5 py-1.5 text-[12px] font-medium tracking-wide text-[#706a64] dark:border-white/[0.1] dark:bg-white/[0.03] dark:text-[#aaa39d]">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-black/[0.09] bg-white/50 px-3.5 py-1.5 text-[12px] font-medium tracking-wide text-[#706a64] dark:border-white/[0.1] dark:bg-white/[0.03]">
               <span className="h-2 w-2 rounded-full bg-[#e85c22]" />
               {details.availability}
             </div>
           )}
-
+          <h6 className="mt-8 max-w-[610px] text-[17px] leading-[1.8]  sm:text-[20px]">
+            👋 Hi, I'm
+          </h6>
           {/* Heading */}
           <h1 className="max-w-[760px] text-[48px] font-bold leading-[0.98] tracking-[-0.055em] sm:text-[64px] lg:text-[68px]">
             {details.name}
@@ -60,9 +63,9 @@ const HeroSection = ({ scrollToSection }:
           </div>
 
           {/* Location */}
-          <div className="mt-7 flex items-center gap-2 text-[14px] text-[#77716b] dark:text-[#aaa39d]">
+          <div className="mt-7 flex items-center gap-2 text-[20px] font-extrabold">
             <FiMapPin size={18} strokeWidth={1.7} />
-            {details.location}
+            <h2>{details.location}</h2>
           </div>
         </div>
 

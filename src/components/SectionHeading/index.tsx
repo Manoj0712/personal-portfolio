@@ -13,8 +13,8 @@ const SectionHeading = ({
       </span>
       <h2 className="mt-3 text-[36px] font-bold tracking-[-0.045em] sm:text-[46px]">
         {title}
-      </h2> 
-      <p className="mt-4 text-[16px] leading-7 text-[#716b65] dark:text-[#aaa39d]">
+      </h2>
+      <p className="mt-4 text-[16px] leading-7">
         {description}
       </p>
     </div>

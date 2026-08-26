@@ -14,7 +14,7 @@ const SkillGroup = ({
         {skills.map((skill) => (
           <div
             key={skill}
-            className="flex items-center gap-2 text-[13px] text-[#706963] dark:text-[#aaa39d]"
+            className="flex items-center gap-2 text-[13px]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[#e85a25]" />
             {skill}

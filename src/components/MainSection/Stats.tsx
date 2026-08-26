@@ -13,7 +13,7 @@ const Stats = () => {
             {stat.value}
           </div>
 
-          <p className="mt-3 text-[13px] leading-[1.6] text-[#706963] dark:text-[#aaa39d]">
+          <p className="mt-3 text-[13px] leading-[1.6]">
             {stat.label}
           </p>
         </div>

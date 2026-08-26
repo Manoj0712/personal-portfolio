@@ -3,26 +3,25 @@ import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types"
 import ManojImage from "@/assets/ManojImage.png"
 
 export const details = {
-  name: "Manojkumar S",
+  name: "Manojkumar",
   role: "Full Stack Developer",
   availability: "",//"Available for new opportunities",
-  description: `I’m a Full Stack Developer with 4+ years of experience building scalable,
-   high-performance web applications and data-driven experiences. 
-   I specialize in React, TypeScript, and JavaScript, with strong expertise 
-   in creating modern, responsive interfaces and interactive visualizations 
-   using Plotly.js. On the backend, I work with Node.js, Express.js, Java, and
-    Spring Boot, building reliable APIs and business-driven applications backed by 
-    PostgreSQL, MySQL, and MongoDB. I enjoy transforming complex requirements into
-     clean, intuitive, and scalable solutions while continuously improving 
-     application performance, maintainability, and user experience.
-`,
-  location: "Tiruppur, Tamil Nadu 641670, India",
+  description: `With 4+ years of experience, I build scalable, high-performance web
+  applications that turn complex business requirements into intuitive digital
+  experiences. I specialize in React, TypeScript, and JavaScript, creating 
+  modern, responsive interfaces and interactive data visualizations with 
+  Plotly.js. On the backend, I work with Node.js, Express.js, Java, and Spring 
+  Boot, developing reliable APIs and data-driven applications using PostgreSQL,
+  MySQL, and MongoDB. I’m passionate about writing clean, maintainable code 
+  and building products that deliver great performance and user experiences.`,
+  location: "Tiruppur, Tamil Nadu-641670, India",
   viewProjects: "View projects",
   getInTouch: "Get in touch",
   image: ManojImage,
   letsBuildSomething: "Let's build something great together.",
   greatTogether: "great together.",
-  openToOpportunities: "I'm open to frontend and full-stack opportunities. If you have an interesting project or role, I'd love to hear from you.",
+  openToOpportunities: `I'm open to frontend and full-stack opportunities.
+   If you have an interesting project or role, I'd love to hear from you.`,
   sayhello: "Say hello",
   mail: "manojkumars435980@gmail.com"
 }
@@ -34,7 +33,7 @@ export const navItems = ["About", "Experience", "Projects", "Skills", "Contact"]
 export const stats = [
   {
     value: "4+",
-    label: "Years building for the web",
+    label: "Years building for the web applications",
   },
   {
     value: "~35%",
