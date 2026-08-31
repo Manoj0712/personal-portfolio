@@ -1,8 +1,8 @@
-import { navItems } from "@/constrains"
+import { NAVITEMS } from "@/constrains"
 
 const NavItems = ({ scrollToSection }: { scrollToSection: (section: string) => void }) => {
   return <>
-    {navItems.map((item) => (
+    {NAVITEMS.map((item) => (
       <button
         key={item}
         onClick={() => scrollToSection(item)}

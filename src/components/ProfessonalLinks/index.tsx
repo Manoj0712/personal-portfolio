@@ -1,11 +1,11 @@
-import { professionalLinks } from "@/constrains";
+import { PROFESSIONALLINKS } from "@/constrains";
 import { map } from "lodash";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const ProfessionalLinks = () => {
   return (<>
     {
-      map(professionalLinks, (link, index) => {
+      map(PROFESSIONALLINKS, (link, index) => {
         return <a
           key={`professionalLinks-${index}`}
           href={link.url}

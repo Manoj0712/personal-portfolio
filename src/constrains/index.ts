@@ -2,9 +2,16 @@ import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types"
 // import profileImage from "@/assets/profile.jpg"
 import ManojImage from "@/assets/ManojImage.png"
 
-export const details = {
-  name: "Manojkumar",
-  role: "Full Stack Developer",
+export const DETAILS = {
+  name: "Manojkumar S",
+  role: [
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer",
+    "Mern Stack Developer",
+    "React Developer",
+    "Java Developer"
+  ],
   availability: "",//"Available for new opportunities",
   description: `With 4+ years of experience, I build scalable, high-performance web
   applications that turn complex business requirements into intuitive digital
@@ -26,11 +33,11 @@ export const details = {
   mail: "manojkumars435980@gmail.com"
 }
 
-export const backeToTop = "Back to top";
-export const rights = `© ${new Date().getFullYear()} Manojkumar S. All rights reserved.`;
-export const navItems = ["About", "Experience", "Projects", "Skills", "Contact"];
+export const BACKTOTOP = "Back to top";
+export const RIGHTS = `© ${new Date().getFullYear()} Manojkumar S. All rights reserved.`;
+export const NAVITEMS = ["About", "Experience", "Projects", "Skills", "Contact"];
 
-export const stats = [
+export const STATS = [
   {
     value: "4+",
     label: "Years building for the web applications",
@@ -49,7 +56,7 @@ export const stats = [
   },
 ];
 
-export const experienceCard: ExperienceCardProps[] = [{
+export const EXPERIENCECARD: ExperienceCardProps[] = [{
   company: "Elumitas India",
   role: "Frontend Developer",
   period: "Mar 2025 — Apr 2026",
@@ -97,7 +104,7 @@ Used AI-assisted development tools including GitHub Copilot, ChatGPT, Codex, and
   ],
 }];
 
-export const projectCard: ProjectCardProps[] = [{
+export const PROJECTCARD: ProjectCardProps[] = [{
   number: "01",
   title: "Personal Finance Management",
   description: "A complete finance platform for tracking transactions, budgets, savings goals, EMIs and financial insights.",
@@ -120,7 +127,7 @@ export const projectCard: ProjectCardProps[] = [{
   ]
 }];
 
-export const skillGroup: SkillGroupProps[] = [
+export const SKILLGROUP: SkillGroupProps[] = [
   {
     title: "Frontend",
     skills: [
@@ -165,7 +172,7 @@ export const skillGroup: SkillGroupProps[] = [
   }
 ]
 
-export const professionalLinks = [{
+export const PROFESSIONALLINKS = [{
   name: "GitHub",
   url: "https://github.com/Manoj0712"
 },

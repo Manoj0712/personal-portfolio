@@ -1,7 +1,15 @@
-import { details } from "@/constrains";
+import { DETAILS } from "@/constrains";
 import { FiMail } from "react-icons/fi";
 
 const ContactSection = () => {
+  const {
+    getInTouch,
+    letsBuildSomething,
+    greatTogether,
+    openToOpportunities,
+    mail,
+    sayhello
+  } = DETAILS;
 
   return (
     <section
@@ -17,22 +25,22 @@ const ContactSection = () => {
 
           <div className="relative">
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#e85b24]">
-              {details.getInTouch}
+              {getInTouch}
             </span>
 
             <h2 className="mt-4 text-[38px] font-bold tracking-[-0.045em] sm:text-[52px] text-white">
-              {details.letsBuildSomething}
-              <span className="block text-[#df5730]">{details.greatTogether}</span>
+              {letsBuildSomething}
+              <span className="block text-[#df5730]">{greatTogether}</span>
             </h2>
             <p className="mx-auto mt-5 max-w-[580px] text-[16px] leading-7">
-              {details.openToOpportunities}
+              {openToOpportunities}
             </p>
             <a
-              href={`mailto:${details.mail}`}
+              href={`mailto:${mail}`}
               className="mt-8 inline-flex items-center gap-3 rounded-[14px] bg-[#d95338] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-500/10 transition hover:-translate-y-0.5 hover:bg-[#c94b32]"
             >
               <FiMail size={18} />
-              {details.sayhello}
+              {sayhello}
             </a>
           </div>
         </div>

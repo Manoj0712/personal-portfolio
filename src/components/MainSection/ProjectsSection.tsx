@@ -1,4 +1,4 @@
-import { projectCard } from "@/constrains";
+import { PROJECTCARD } from "@/constrains";
 import ProjectCard from "../ProjectCard";
 import SectionHeading from "../SectionHeading";
 import { map } from "lodash";
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
           description="Selected projects focused on performance, usability and scalable architecture."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
-          {map(projectCard, (project, index) => {
+          {map(PROJECTCARD, (project, index) => {
             return <ProjectCard
               key={`projectCard + ${index}`}
               number={project.number}

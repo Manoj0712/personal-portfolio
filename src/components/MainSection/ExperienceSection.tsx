@@ -1,7 +1,7 @@
-import { experienceCard } from "@/constrains";
 import ExperienceCard from "../ExperienceCard";
 import SectionHeading from "../SectionHeading";
 import { map } from "lodash";
+import { EXPERIENCECARD } from "@/constrains";
 
 const ExperienceSection = () => {
 
@@ -16,7 +16,7 @@ const ExperienceSection = () => {
         description="4+ years of experience building enterprise applications, dashboards and modern web products."
       />
       <div className="mt-12 space-y-4">
-        {map(experienceCard, (experience, index) => (
+        {map(EXPERIENCECARD, (experience, index) => (
           <ExperienceCard
             key={experience.company + index}
             experienceDetails={experience}

@@ -1,4 +1,4 @@
-import { skillGroup } from "@/constrains";
+import { SKILLGROUP } from "@/constrains";
 import SectionHeading from "../SectionHeading";
 import SkillGroup from "../SkillGroup";
 import { map } from "lodash";
@@ -16,7 +16,7 @@ const SkillsSection = () => {
         description="A practical stack focused on building reliable, maintainable production applications."
       />
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {map(skillGroup, (group, index) => (
+        {map(SKILLGROUP, (group, index) => (
           <SkillGroup
             key={group.title + index}
             title={group.title}
