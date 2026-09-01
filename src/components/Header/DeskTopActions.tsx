@@ -19,7 +19,7 @@ const DeskTopActions = ({
       >
         manojkumar<span className="text-[#ed5b22]">.dev</span>
       </button>
-      <Navigation scrollToSection={scrollToSection} />
+      <Navigation />
       <div className="hidden items-center gap-2 md:flex">
         <button
           onClick={() => setDarkMode(!darkMode)}

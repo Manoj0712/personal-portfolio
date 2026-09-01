@@ -1,6 +1,7 @@
 import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types";
 // import profileImage from "@/assets/profile.jpg"
 import ManojImage from "@/assets/ManojImage.png"
+import { FiBookOpen, FiBriefcase, FiCode, FiHome, FiMail } from "react-icons/fi";
 
 export const DETAILS = {
   name: "Manojkumar S",
@@ -35,7 +36,16 @@ export const DETAILS = {
 
 export const BACKTOTOP = "Back to top";
 export const RIGHTS = `© ${new Date().getFullYear()} Manojkumar S. All rights reserved.`;
-export const NAVITEMS = ["About", "Experience", "Projects", "Skills", "Contact"];
+
+export const NAVITEMS = [
+  { label: "Home", icon: FiHome, routerName: "/" },
+  { label: "Education", icon: FiBookOpen, routerName: "/education" },
+  { label: "Experience", icon: FiBriefcase, routerName: "/experience" },
+  { label: "Projects", icon: FiCode, routerName: "/projects" },
+  { label: "Contact", icon: FiMail, routerName: "/contact" },
+  // { label: "Certifications", icon: FiAward },
+];
+// export const NAVITEMS = ["About", "Experience", "Projects", "Skills", "Contact"];
 
 export const STATS = [
   {

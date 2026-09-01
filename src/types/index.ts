@@ -50,3 +50,8 @@ export interface DeskTopActionsProps {
   mobileMenu: boolean;
   setMobileMenu: (mobileMenu: boolean) => void;
 }
+export interface NavItemsProps {
+  label: string;
+  icon: any;
+  routerName: string;
+}

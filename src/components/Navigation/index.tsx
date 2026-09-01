@@ -1,10 +1,9 @@
 import NavItems from "./NavItems";
 
-const Navigation = ({ scrollToSection }:
-  { scrollToSection: (section: string) => void }) => {
+const Navigation = () => {
 
   return (<nav className="hidden items-center gap-8 md:flex">
-    <NavItems scrollToSection={scrollToSection} />
+    <NavItems />
   </nav>
   );
 };
