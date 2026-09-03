@@ -3,6 +3,8 @@ import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types"
 import ManojImage from "@/assets/ManojImage.png"
 import { FiBookOpen, FiBriefcase, FiCode, FiHome, FiMail } from "react-icons/fi";
 
+
+export const NAME = "Manojkumar S";
 export const DETAILS = {
   name: "Manojkumar S",
   role: [

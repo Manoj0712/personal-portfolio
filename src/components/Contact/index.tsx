@@ -83,14 +83,14 @@ export default function ContactPage() {
 
   const [sent, setSent] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     setSent(true);
@@ -102,74 +102,61 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      
 
-      <main className="relative mx-auto max-w-7xl px-6 lg:px-10">
+
+      <main className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         {/* Hero */}
-        <section className="flex flex-col items-center py-24 text-center">
-          <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 shadow-lg">
-            <FiMail size={34} />
+        <section className="flex flex-col items-center py-16 text-center sm:py-20 lg:py-24">
+          <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 shadow-lg sm:h-20 sm:w-20">
+            <FiMail size={30} />
           </div>
-
-          <h1 className="text-6xl font-extrabold tracking-tight sm:text-7xl">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
             Let's Connect
           </h1>
-
-          <p className="mt-6 max-w-2xl text-lg text-slate-400">
+          <p className="mt-6 max-w-2xl text-base text-slate-400 sm:text-lg">
             Have a project in mind? Want to collaborate? Or just want to say
             hello? I'd love to hear from you!
           </p>
         </section>
 
         {/* Get in touch + form */}
-        <section className="grid gap-16 pb-28 lg:grid-cols-2">
+        <section className="grid gap-12 pb-20 lg:grid-cols-2 lg:gap-16 lg:pb-28">
           {/* Left column */}
           <div>
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="text-3xl font-extrabold sm:text-4xl">
               Get in Touch
             </h2>
-
-            <p className="mt-5 max-w-md text-slate-400">
+            <p className="mt-5 max-w-md text-base text-slate-400 sm:text-lg">
               I'm always open to discussing new opportunities, interesting
               projects, or just having a chat about technology and
               development. Don't hesitate to reach out!
             </p>
 
             <div className="mt-10 space-y-5">
-              {contactCards.map(
-                ({ icon: Icon, title, sub, value, href }) => (
-                  <a
-                    key={title}
-                    href={href}
-                    className="flex items-start gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-indigo-500"
-                  >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500">
-                      <Icon size={18} />
+              {contactCards.map(({ icon: Icon, title, sub, value, href }) => (
+                <a
+                  key={title}
+                  href={href}
+                  className="flex items-start gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-indigo-500"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500">
+                    <Icon size={18} />
+                  </span>
+                  <span>
+                    <span className="block text-base font-semibold">
+                      {title}
                     </span>
-
-                    <span>
-                      <span className="block font-semibold">
-                        {title}
-                      </span>
-
-                      <span className="block text-sm text-slate-400">
-                        {sub}
-                      </span>
-
-                      <span className="mt-1 block text-indigo-300 hover:underline">
-                        {value}
-                      </span>
+                    <span className="block text-sm text-slate-400">{sub}</span>
+                    <span className="mt-1 block text-sm text-indigo-300 hover:underline sm:text-base">
+                      {value}
                     </span>
-                  </a>
-                )
-              )}
+                  </span>
+                </a>
+              ))}
             </div>
 
             <div className="mt-10 border-t border-slate-800 pt-8">
-              <h3 className="mb-4 font-semibold">
-                Find me online
-              </h3>
-
+              <h3 className="mb-4 text-base font-semibold">Find me online</h3>
               <div className="flex gap-3">
                 {socialIcons.map((Icon, i) => (
                   <a
@@ -182,25 +169,33 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
+
+            {/* Response time status */}
+            <div className="mt-6 rounded-2xl border border-emerald-500/40 bg-emerald-950 p-6">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="text-base font-semibold text-emerald-400">
+                  Usually responds within 24 hours
+                </span>
+              </div>
+              <p className="mt-2 text-sm text-slate-400">
+                I check my messages regularly and try to respond as quickly
+                as possible.
+              </p>
+            </div>
           </div>
 
           {/* Right column: form */}
           <div
             id="contact-form"
-            className="rounded-3xl border border-slate-800 bg-slate-900 p-8 sm:p-10"
+            className="rounded-3xl border border-slate-800 bg-slate-900 p-6 sm:p-8 lg:p-10"
           >
-            <h3 className="text-2xl font-bold">
-              Send a Message
-            </h3>
-
+            <h3 className="text-xl font-bold sm:text-2xl">Send a Message</h3>
             <p className="mt-2 text-sm text-slate-400">
               Fill out the form below and I'll get back to you soon.
             </p>
 
-            <form
-              onSubmit={handleSubmit}
-              className="mt-8 space-y-6"
-            >
+            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <Field
                   label="Name"
@@ -210,7 +205,6 @@ export default function ContactPage() {
                   onChange={handleChange}
                   placeholder="Your full name"
                 />
-
                 <Field
                   label="Email"
                   required
@@ -233,10 +227,8 @@ export default function ContactPage() {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-slate-200">
-                  Message{" "}
-                  <span className="text-indigo-400">*</span>
+                  Message <span className="text-indigo-400">*</span>
                 </label>
-
                 <textarea
                   name="message"
                   required
@@ -250,13 +242,10 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 py-3.5 font-medium shadow-lg transition hover:opacity-90"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 py-3.5 text-sm font-medium shadow-lg transition hover:opacity-90 sm:text-base"
               >
                 <FiSend size={16} />
-
-                {sent
-                  ? "Message Sent!"
-                  : "Send Message"}
+                {sent ? "Message Sent!" : "Send Message"}
               </button>
 
               <p className="rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-center text-xs text-slate-400">
@@ -269,13 +258,12 @@ export default function ContactPage() {
         </section>
 
         {/* FAQ */}
-        <section className="pb-24">
+        <section className="pb-20 lg:pb-24">
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="text-3xl font-extrabold sm:text-4xl">
               Frequently Asked Questions
             </h2>
-
-            <p className="mt-3 text-slate-400">
+            <p className="mt-3 text-sm text-slate-400 sm:text-base">
               Quick answers to common questions
             </p>
           </div>
@@ -286,11 +274,8 @@ export default function ContactPage() {
                 key={q}
                 className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
               >
-                <h3 className="font-semibold">
-                  {q}
-                </h3>
-
-                <p className="mt-2 text-slate-400">
+                <h3 className="text-base font-semibold sm:text-lg">{q}</h3>
+                <p className="mt-2 text-sm text-slate-400 sm:text-base">
                   {a}
                 </p>
               </div>
@@ -301,12 +286,11 @@ export default function ContactPage() {
 
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-black">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-3 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
           <div>
-            <h4 className="text-xl font-bold text-indigo-300">
+            <h4 className="text-lg font-bold text-indigo-300 sm:text-xl">
               Manojkumar C
             </h4>
-
             <p className="mt-3 max-w-xs text-sm text-slate-400">
               Full Stack Developer, Gen AI Engineer, and Cloud Engineer.
               Founder of Fresh Spar Technologies, passionate about creating
@@ -315,34 +299,17 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h4 className="mb-3 font-semibold">
-              Quick Links
-            </h4>
-
+            <h4 className="mb-3 text-base font-semibold">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2 text-sm text-slate-400">
-              <a href="#" className="hover:text-white">
-                Home
-              </a>
-
-              <a href="#" className="hover:text-white">
-                About
-              </a>
-
-              <a href="#" className="hover:text-white">
-                Projects
-              </a>
-
-              <a href="#" className="hover:text-white">
-                Contact
-              </a>
+              <a href="#" className="hover:text-white">Home</a>
+              <a href="#" className="hover:text-white">About</a>
+              <a href="#" className="hover:text-white">Projects</a>
+              <a href="#" className="hover:text-white">Contact</a>
             </div>
           </div>
 
           <div>
-            <h4 className="mb-3 font-semibold">
-              Connect
-            </h4>
-
+            <h4 className="mb-3 text-base font-semibold">Connect</h4>
             <div className="flex gap-3">
               {socialIcons.map((Icon, i) => (
                 <a
@@ -359,28 +326,20 @@ export default function ContactPage() {
 
         <div className="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
           © 2026 Manojkumar C ( Fresh Spar Technologies ). Made with{" "}
-          <span className="text-pink-500">♥</span> using React &amp;
-          Tailwind CSS
+          <span className="text-pink-500">♥</span> using React &amp; Tailwind
+          CSS
         </div>
       </footer>
     </div>
   );
 }
 
-function Field({ label, required, ...props }: {
-  label: string,
-  required: boolean,
-  props: any
-}) {
+function Field({ label, required, ...props }: any) {
   return (
     <div>
       <label className="mb-2 block text-sm font-medium text-slate-200">
-        {label}{" "}
-        {required && (
-          <span className="text-indigo-400">*</span>
-        )}
+        {label} {required && <span className="text-indigo-400">*</span>}
       </label>
-
       <input
         {...props}
         className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition focus:border-indigo-400"
