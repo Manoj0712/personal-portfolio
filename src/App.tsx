@@ -8,16 +8,19 @@ import ExperienceSection from "./components/MainSection/ExperienceSection";
 import ContactSection from "./components/MainSection/ContactSection";
 import ProjectsSection from "./components/MainSection/ProjectsSection";
 import ContactPage from "./components/Contact";
+import Education from "./components/Education";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [color, setColor] = useState(0);
 
   const scrollToSection = (section: string) => {
     const id = section.toLowerCase();
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
+
     setMobileMenu(false);
   };
 
@@ -35,7 +38,7 @@ function App() {
         setMobileMenu={setMobileMenu} />
       <Routes>
         <Route path="/" element={<HeroSection scrollToSection={scrollToSection} />} />
-        <Route path="/education" element={<HeroSection scrollToSection={scrollToSection} />} />
+        <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<ExperienceSection />} />
         <Route path="/projects" element={<ProjectsSection />} />
         <Route path="/contact" element={<ContactPage />} />

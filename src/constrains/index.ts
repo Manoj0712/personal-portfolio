@@ -1,7 +1,7 @@
 import { ProjectCardProps, ExperienceCardProps, SkillGroupProps } from "@/types";
 // import profileImage from "@/assets/profile.jpg"
 import ManojImage from "@/assets/ManojImage.png"
-import { FiBookOpen, FiBriefcase, FiCode, FiHome, FiMail } from "react-icons/fi";
+import { FiBookOpen, FiBriefcase, FiCode, FiGithub, FiHome, FiLinkedin, FiMail, FiMessageCircle, FiTwitter } from "react-icons/fi";
 
 
 export const NAME = "Manojkumar S";
@@ -192,3 +192,10 @@ export const PROFESSIONALLINKS = [{
   name: "LinkedIn",
   url: "https://www.linkedin.com/in/manojkumar-sakthivel-358214271"
 }]
+
+export const SOCIALICONS = [
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+  FiMessageCircle,
+];

@@ -13,12 +13,6 @@ const DeskTopActions = ({
 
   return (
     <div className="mx-auto flex h-[76px] max-w-[1160px] items-center justify-between px-5 sm:px-8 lg:px-0">
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="text-[20px] font-bold tracking-[-0.04em]"
-      >
-        manojkumar<span className="text-[#ed5b22]">.dev</span>
-      </button>
       <Navigation />
       <div className="hidden items-center gap-2 md:flex">
         <button

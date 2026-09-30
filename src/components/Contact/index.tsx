@@ -285,52 +285,7 @@ export default function ContactPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 bg-black">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-          <div>
-            <h4 className="text-lg font-bold text-indigo-300 sm:text-xl">
-              Manojkumar C
-            </h4>
-            <p className="mt-3 max-w-xs text-sm text-slate-400">
-              Full Stack Developer, Gen AI Engineer, and Cloud Engineer.
-              Founder of Fresh Spar Technologies, passionate about creating
-              innovative solutions and contributing to the tech community.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="mb-3 text-base font-semibold">Quick Links</h4>
-            <div className="grid grid-cols-2 gap-2 text-sm text-slate-400">
-              <a href="#" className="hover:text-white">Home</a>
-              <a href="#" className="hover:text-white">About</a>
-              <a href="#" className="hover:text-white">Projects</a>
-              <a href="#" className="hover:text-white">Contact</a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="mb-3 text-base font-semibold">Connect</h4>
-            <div className="flex gap-3">
-              {socialIcons.map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-800 text-slate-300 hover:text-white"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
-          © 2026 Manojkumar C ( Fresh Spar Technologies ). Made with{" "}
-          <span className="text-pink-500">♥</span> using React &amp; Tailwind
-          CSS
-        </div>
-      </footer>
-    </div>
+         </div>
   );
 }
 
