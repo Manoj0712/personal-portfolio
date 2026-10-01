@@ -1,6 +1,6 @@
 import { NAVITEMS } from "@/constrains"
 import { NavItemsProps } from "@/types"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 const NavItems = () => {
@@ -33,6 +33,10 @@ const NavItems = () => {
     </button>
   }
 
+  useEffect(() => {
+    const firstLetter = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
+    setCurrentSection(window.location.pathname === "/" ? "Home" : firstLetter(window.location.pathname.substring(1)))
+  }, [window.location.pathname])
   return <>
     {NAVITEMS.map((item) => renderNavItem(item))}
   </>

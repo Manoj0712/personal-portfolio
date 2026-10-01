@@ -20,13 +20,13 @@ const Footer = () => {
   //   </div>
   // </footer>
 
-  return <footer className="border-t border-slate-800 bg-black">
-    <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
+  return <footer className="border-t border-slate-800 bg-black  ">
+    <div className="mx-auto text-[500px] grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
       <div>
-        <h4 className="text-lg font-bold text-indigo-300 sm:text-xl">
+        <h4 className="text-[26px] font-bold text-indigo-300 sm:text-xl">
           {NAME}
         </h4>
-        <p className="mt-3 max-w-xs text-sm text-slate-400">
+        <p className="mt-3 max-w-xs text-[20px] text-slate-400">
           Full Stack Developer, Gen AI Engineer, and Cloud Engineer.
           Founder of Fresh Spar Technologies, passionate about creating
           innovative solutions and contributing to the tech community.
@@ -34,17 +34,28 @@ const Footer = () => {
       </div>
 
       <div>
-        <h4 className="mb-3 text-base font-semibold">Quick Links</h4>
-        <div className="grid grid-cols-2 gap-2 text-sm text-slate-400">
-          <a href="#" className="hover:text-white">Home</a>
-          <a href="#" className="hover:text-white">About</a>
-          <a href="#" className="hover:text-white">Projects</a>
-          <a href="#" className="hover:text-white">Contact</a>
+        <h4 className="mb-3 text-[20px] text-white font-semibold">Quick Links</h4>
+        <div className="grid grid-cols-2 gap-2 text-[20px] text-slate-400 items-start ">
+          <button onClick={() => window.location.href = "/"} className="text-left hover:text-white">
+            Home
+          </button>
+          <button onClick={() => window.location.href = "/education"} className="text-left hover:text-white">
+            Education
+          </button>
+          <button onClick={() => window.location.href = "/experience"} className="text-left hover:text-white">
+            Experience
+          </button>
+          <button onClick={() => window.location.href = "/projects"} className="text-left hover:text-white">
+            Projects
+          </button>
+          <button onClick={() => window.location.href = "/contact"} className="text-left hover:text-white">
+            Contact
+          </button>
         </div>
       </div>
 
       <div>
-        <h4 className="mb-3 text-base font-semibold">Connect</h4>
+        <h4 className="mb-3 text-[20px] text-white font-semibold">Connect</h4>
         <div className="flex gap-3">
           {SOCIALICONS.map((Icon, i) => (
             <a
@@ -59,7 +70,7 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    <div className="border-t border-slate-800 py-6 text-center text-[20px] text-slate-500">
       © 2026 {NAME} . Made with{" "}
       <span className="text-pink-500">♥</span> using React &amp; Tailwind
       CSS
