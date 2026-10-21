@@ -59,7 +59,7 @@ export const DETAILS = {
   mail: "manojkumars435980@gmail.com",
   // Drop your resume into public/resume/ and set the path, e.g. "/resume/ManojkumarS-Resume.pdf".
   // The "Download Resume" button stays hidden while this is empty.
-  resume: "",
+  resume: "/resume/Manojkumar-S-Resume.pdf",
 }
 
 export const RIGHTS = `© ${new Date().getFullYear()} ${NAME}. Made with`;
@@ -69,7 +69,7 @@ export const NAVITEMS: NavItemsProps[] = [
   { label: "Education", icon: LuGraduationCap, routerName: "/education" },
   { label: "Experience", icon: FiBriefcase, routerName: "/experience" },
   { label: "Projects", icon: FiCode, routerName: "/projects" },
-  { label: "Certifications", icon: FiAward, routerName: "/certifications" },
+  // { label: "Certifications", icon: FiAward, routerName: "/certifications" },
   { label: "Contact", icon: FiMail, routerName: "/contact" },
 ];
 

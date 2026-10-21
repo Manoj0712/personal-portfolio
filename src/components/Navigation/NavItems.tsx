@@ -17,16 +17,16 @@ const NavItems = ({ mobile = false }: { mobile?: boolean }) => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: index * 0.1, duration: 0.3 }}
       >
-      <Link
-        to={item.routerName}
-        className={`flex items-center rounded-lg px-4 py-3 text-base font-medium transition-all duration-300 ${active
-          ? "border border-blue-500/30 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400"
-          : "text-white/70 hover:bg-white/10 hover:text-white"
-          }`}
-      >
-        <Icon size={18} className="mr-3" />
-        {item.label}
-      </Link>
+        <Link
+          to={item.routerName}
+          className={`flex items-center rounded-lg px-4 py-3 text-base font-medium transition-all duration-300 ${active
+            ? "border border-blue-500/30 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400"
+            : "text-white/70 hover:bg-white/10 hover:text-white"
+            }`}
+        >
+          <Icon size={18} className="mr-3" />
+          {item.label}
+        </Link>
       </motion.div>
     }
 

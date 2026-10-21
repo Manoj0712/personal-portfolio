@@ -29,7 +29,7 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/experience" element={<ExperienceSection />} />
           <Route path="/projects" element={<ProjectsSection />} />
-          <Route path="/certifications" element={<CertificationsPage />} />
+          {/* <Route path="/certifications" element={<CertificationsPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<MainSection />} />
         </Routes>
