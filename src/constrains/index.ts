@@ -13,7 +13,6 @@ import type {
 } from "@/types";
 import ManojImage from "@/assets/ManojImage.png"
 import {
-  FiAward,
   FiBriefcase,
   FiClock,
   FiCode,
@@ -57,8 +56,6 @@ export const DETAILS = {
   location: "Tiruppur, Tamil Nadu-641670, India",
   image: ManojImage,
   mail: "manojkumars435980@gmail.com",
-  // Drop your resume into public/resume/ and set the path, e.g. "/resume/ManojkumarS-Resume.pdf".
-  // The "Download Resume" button stays hidden while this is empty.
   resume: "/resume/Manojkumar-S-Resume.pdf",
 }
 

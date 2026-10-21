@@ -9,7 +9,7 @@ import ExperienceSection from "./components/MainSection/ExperienceSection";
 import ProjectsSection from "./components/MainSection/ProjectsSection";
 import ContactPage from "./components/Contact";
 import Education from "./components/Education";
-import CertificationsPage from "./components/Certifications";
+// import CertificationsPage from "./components/Certifications";
 
 function App() {
   const { pathname } = useLocation();

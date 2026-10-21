@@ -39,15 +39,12 @@ const HeroSection = () => {
                 {name}
               </span>
             </motion.h1>
-
             <motion.div variants={item} className="mb-8 min-h-[3rem] text-xl font-medium sm:text-2xl lg:text-3xl">
               <DynamicRole />
             </motion.div>
-
             <motion.div variants={item} className="mb-8 flex items-center justify-center gap-3 lg:justify-start">
               <ProfessionalLinks />
             </motion.div>
-
             <motion.div variants={item} className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
               {github && (
                 <a href={github.url} target="_blank" rel="noreferrer"
