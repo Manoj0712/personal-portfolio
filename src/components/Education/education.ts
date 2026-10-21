@@ -1,51 +1,58 @@
 import type { IconType } from "react-icons";
-import { SiLeetcode, SiHackerrank, SiCodechef, SiHackerearth, SiKaggle } from "react-icons/si";
-import { FaChartBar } from "react-icons/fa";
-import { FiUsers, FiStar } from "react-icons/fi";
+import { FiStar, FiUsers } from "react-icons/fi";
 import { LuTrophy } from "react-icons/lu";
 
-export interface Platform { name: string; icon: IconType; color: string }
+export interface Platform { name: string; url: string; logo: string; invert?: boolean }
 export interface Achievement { text: string; icon: IconType }
 export interface EducationItem {
   institution: string; degree: string; period: string; location: string; grade: string;
-  status: string; description: string; highlights: string[]; achievements: Achievement[]; website: string;
+  status: string; description: string; highlights: string[]; achievements: Achievement[]; website?: string;
 }
-export interface Certification { title: string; issuer: string; year: string; image?: string; gradient: string }
+export interface Certification {
+  title: string; issuer: string; year: string; badge: string; gradient: string; logo?: string; url?: string;
+}
 
+// Coding / professional profiles shown under the Education heading.
+// Add LeetCode, HackerRank, etc. here with your own profile URLs.
 export const platforms: Platform[] = [
-  { name: "LeetCode", icon: SiLeetcode, color: "#f5a623" },
-  { name: "HackerRank", icon: SiHackerrank, color: "#2ec866" },
-  { name: "CodeChef", icon: SiCodechef, color: "#dddddd" },
-  { name: "HackerEarth", icon: SiHackerearth, color: "#e8dcb8" },
-  { name: "Kaggle", icon: SiKaggle, color: "#38b6ff" },
-  { name: "Stats", icon: FaChartBar, color: "#3b82f6" },
+  { name: "GitHub", url: "https://github.com/Manoj0712", logo: "https://cdn.simpleicons.org/github/FFFFFF" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/manojkumar-sakthivel-358214271", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" },
 ];
 
-export const education: EducationItem = {
-  institution: "Sri Krishna College Of Engineering and Technology",
-  degree: "B.Tech. in Computer Science and Business System",
-  period: "2021 - 2025",
-  location: "Coimbatore, Tamil Nadu",
-  grade: "First Class",
+// TODO: replace with your real degree details.
+export const educationList: EducationItem[] = [{
+  institution: "Your College Name",
+  degree: "Your Degree (e.g. B.E. Computer Science and Engineering)",
+  period: "20XX - 20XX",
+  location: "Tamil Nadu, India",
+  grade: "Your Grade / CGPA",
   status: "Completed",
   description:
-    "Studied software engineering fundamentals with specialization in Full Stack Development, Machine Learning, and Cloud Computing.",
+    "Studied computer science fundamentals and built a strong foundation in programming, databases and web development.",
   highlights: [
-    "I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
-    "Apart from this, I have done courses on Machine Learning, Cloud Computing and Full Stack Development.",
-    "I have won many Hackathons with my friends such as Kavach, VOIS Finals, SVCE etc.. and also started Fresh Spar Technologies.",
+    "Studied core subjects like Data Structures, Algorithms, DBMS, Operating Systems and Computer Networks.",
+    "Built projects in web development using JavaScript, Java and SQL.",
+    "Started my professional career as a Software Developer at Vyoog Information Private Limited.",
   ],
   achievements: [
-    { text: "Multiple Hackathon Winner (Kavach, VOIS Finals, SVCE)", icon: LuTrophy },
-    { text: "Founder of Fresh Spar Technologies", icon: FiStar },
+    { text: "4+ years of industry experience", icon: LuTrophy },
+    { text: "Full Stack Developer", icon: FiStar },
     { text: "Active in Tech Communities", icon: FiUsers },
   ],
-  website: "https://example.com",
-};
+}];
 
-// Set `image` to a real URL/import to show a logo instead of the gradient placeholder.
+// TODO: replace with your real certifications. Set `logo` to show an issuer logo instead of the emoji badge.
 export const certifications: Certification[] = [
-  { title: "Cloud Practitioner", issuer: "Dummy Issuer", year: "2024", gradient: "#d9822b,#7a4a2a" },
-  { title: "Machine Learning", issuer: "Dummy Issuer", year: "2023", gradient: "#4aa3f0,#1e3a6e" },
-  { title: "Full Stack Development", issuer: "Dummy Issuer", year: "2023", gradient: "#e8b84a,#3a9c5f" },
+  { title: "Cloud Practitioner", issuer: "Dummy Issuer", year: "2024", badge: "☁️", gradient: "from-orange-400 to-yellow-500" },
+  { title: "Machine Learning", issuer: "Dummy Issuer", year: "2023", badge: "🤖", gradient: "from-blue-400 to-cyan-500" },
+  { title: "Full Stack Development", issuer: "Dummy Issuer", year: "2023", badge: "💻", gradient: "from-purple-400 to-pink-500" },
+];
+
+export const validatedSkills = [
+  { badge: "⚛️", label: "React & TypeScript" },
+  { badge: "🟢", label: "Node.js & Express" },
+  { badge: "☕", label: "Java & Spring Boot" },
+  { badge: "🐘", label: "PostgreSQL" },
+  { badge: "📊", label: "Data Visualization" },
+  { badge: "🤖", label: "RAG & AI Tools" },
 ];

@@ -10,9 +10,9 @@ const DynamicRole = () => {
 
   useEffect(() => {
     const currentRole = roles[roleIndex];
-    const typingSpeed = 120;   // time between each typed letter
-    const deletingSpeed = 70;  // time between each deleted letter
-    const pauseAfterTyping = 1000;
+    const typingSpeed = 100;   // time between each typed letter
+    const deletingSpeed = 50;  // time between each deleted letter
+    const pauseAfterTyping = 2000;
 
     let timeout: ReturnType<typeof setTimeout>;
 
@@ -29,19 +29,19 @@ const DynamicRole = () => {
         setDisplayText(currentRole.substring(0, displayText.length - 1));
       }, deletingSpeed);
     } else if (isDeleting && displayText.length === 0) {
-      setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, deletingSpeed);
     }
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, roleIndex]);
+  }, [displayText, isDeleting, roleIndex, roles]);
 
   return (
-    <span className="mt-2 block bg-gradient-to-r from-[#f05b20] via-[#df5235] to-[#c9484c] bg-clip-text text-transparent">
+    <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400 bg-clip-text font-bold text-transparent">
       {displayText}
-      <span
-        className="ml-1 inline-block h-[0.85em] w-[3px] translate-y-[2px] bg-[#df5235] align-middle animate-[blink_0.8s_step-end_infinite]"
-      />
+      <span className="ml-1 animate-pulse align-middle text-orange-400">|</span>
     </span>
   );
 };

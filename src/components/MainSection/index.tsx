@@ -1,19 +1,15 @@
 import HeroSection from "./HeroSection";
-import ExperienceSection from "./ExperienceSection";
-import ProjectsSection from "./ProjectsSection";
-import SkillsSection from "./SkillsSection";
-import ContactSection from "./ContactSection";
+import Stats from "./Stats";
+import WhatIDoSection from "./WhatIDoSection";
 
-const MainSection = ({ scrollToSection }: { scrollToSection: (section: string) => void }) => {
+const MainSection = () => {
 
   return (
-    <main>
-      <HeroSection scrollToSection={scrollToSection} />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
-    </main>
+    <div className="relative overflow-hidden">
+      <HeroSection />
+      <Stats />
+      <WhatIDoSection />
+    </div>
   )
 
 }

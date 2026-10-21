@@ -1,79 +1,72 @@
-// import { FiChevronDown } from "react-icons/fi";
-// import ProfessionalLinks from "../ProfessonalLinks";
-import { BACKTOTOP, NAME, RIGHTS, SOCIALICONS } from "@/constrains";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FiHeart } from "react-icons/fi";
+import { DETAILS, NAME, NAVITEMS, RIGHTS } from "@/constrains";
+import ProfessionalLinks from "../ProfessonalLinks";
 
 const Footer = () => {
-  // return <footer className="border-t border-black/[0.06] dark:border-white/[0.06]">
-  //   <div className="mx-auto flex max-w-[1160px] flex-col items-center justify-between gap-4 px-5 py-7 text-[13px] sm:px-8 md:flex-row lg:px-0">
-  //     <p>{RIGHTS}</p>
-  //     <div className="flex items-center gap-2">
-  //       <ProfessionalLinks />
-  //       <button
-  //         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  //         className="ml-2 flex items-center gap-1 rounded-lg px-3 py-2 
-  //         transition hover:bg-black/[0.04] dark:hover:bg-white/[0.05]"
-  //       >
-  //         {BACKTOTOP}
-  //         <FiChevronDown className="rotate-180" size={15} />
-  //       </button>
-  //     </div>
-  //   </div>
-  // </footer>
 
-  return <footer className="border-t border-slate-800 bg-black  ">
-    <div className="mx-auto text-[500px] grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-      <div>
-        <h4 className="text-[26px] font-bold text-indigo-300 sm:text-xl">
-          {NAME}
-        </h4>
-        <p className="mt-3 max-w-xs text-[20px] text-slate-400">
-          Full Stack Developer, Gen AI Engineer, and Cloud Engineer.
-          Founder of Fresh Spar Technologies, passionate about creating
-          innovative solutions and contributing to the tech community.
+  return <footer className="relative z-10 border-t border-white/10 bg-gradient-to-t from-gray-900 to-black">
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="space-y-4"
+        >
+          <h3 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-2xl font-bold text-transparent">
+            {NAME}
+          </h3>
+          <p className="max-w-md text-white/70">
+            {DETAILS.footerBio}
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="space-y-4"
+        >
+          <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+          <div className="grid grid-cols-2 gap-2">
+            {NAVITEMS.map((item) => (
+              <Link
+                key={item.routerName}
+                to={item.routerName}
+                className="text-sm text-white/70 transition-colors duration-300 hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="space-y-4"
+        >
+          <h4 className="text-lg font-semibold text-white">Connect</h4>
+          <div className="flex space-x-4">
+            <ProfessionalLinks variant="footer" />
+          </div>
+        </motion.div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="mt-12 flex flex-col items-center justify-between space-y-4 border-t border-white/10 pt-8 md:flex-row md:space-y-0">
+        <p className="flex flex-wrap items-center justify-center text-sm text-white/50">
+          {RIGHTS}{" "}
+          <FiHeart className="mx-1 h-4 w-4 fill-current text-red-500" />
+          using React &amp; Tailwind CSS
         </p>
-      </div>
-
-      <div>
-        <h4 className="mb-3 text-[20px] text-white font-semibold">Quick Links</h4>
-        <div className="grid grid-cols-2 gap-2 text-[20px] text-slate-400 items-start ">
-          <button onClick={() => window.location.href = "/"} className="text-left hover:text-white">
-            Home
-          </button>
-          <button onClick={() => window.location.href = "/education"} className="text-left hover:text-white">
-            Education
-          </button>
-          <button onClick={() => window.location.href = "/experience"} className="text-left hover:text-white">
-            Experience
-          </button>
-          <button onClick={() => window.location.href = "/projects"} className="text-left hover:text-white">
-            Projects
-          </button>
-          <button onClick={() => window.location.href = "/contact"} className="text-left hover:text-white">
-            Contact
-          </button>
-        </div>
-      </div>
-
-      <div>
-        <h4 className="mb-3 text-[20px] text-white font-semibold">Connect</h4>
-        <div className="flex gap-3">
-          {SOCIALICONS.map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-800 text-slate-300 hover:text-white"
-            >
-              <Icon size={16} />
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <div className="border-t border-slate-800 py-6 text-center text-[20px] text-slate-500">
-      © 2026 {NAME} . Made with{" "}
-      <span className="text-pink-500">♥</span> using React &amp; Tailwind
-      CSS
+      </motion.div>
     </div>
   </footer>
 

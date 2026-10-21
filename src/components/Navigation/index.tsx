@@ -2,9 +2,9 @@ import NavItems from "./NavItems";
 
 const Navigation = () => {
 
-  return (<nav className="hidden items-center gap-8 md:flex">
+  return (<div className="hidden items-center space-x-1 md:flex">
     <NavItems />
-  </nav>
+  </div>
   );
 };
 

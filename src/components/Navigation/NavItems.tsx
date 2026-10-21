@@ -1,44 +1,57 @@
 import { NAVITEMS } from "@/constrains"
 import { NavItemsProps } from "@/types"
-import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { motion } from "framer-motion"
 
-const NavItems = () => {
-  const [currentSection, setCurrentSection] = useState<string>("Home")
-  const navigation = useNavigate();
+const NavItems = ({ mobile = false }: { mobile?: boolean }) => {
+  const { pathname } = useLocation();
 
-  const routerNavigation = (item: NavItemsProps) => {
-    setCurrentSection(item.label)
-    navigation(item.routerName)
-  }
-
-  const renderNavItem = (item: NavItemsProps) => {
+  const renderNavItem = (item: NavItemsProps, index: number) => {
     const Icon = item.icon
+    const active = pathname === item.routerName
 
-    return <button
-      onClick={() => routerNavigation(item)}
-      className="inline-flex items-center justify-center whitespace-nowrap 
-      ring-offset-background focus-visible:outline-none 
-      focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-      disabled:pointer-events-none disabled:opacity-50 hover:bg-accent
-      hover:text-white
-       hover:text-accent-foreground h-9 relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group text-blue-400 bg-blue-400/10 shadow-lg shadow-blue-400/20">
-      <Icon size={16} className="mr-2" />
-      {item?.label}
-      {currentSection === item.label && (
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30"
-          style={{ transform: "none", transformOrigin: "50% 50% 0px" }}>
-        </div>
+    if (mobile) {
+      return <motion.div
+        key={item.routerName}
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: index * 0.1, duration: 0.3 }}
+      >
+      <Link
+        to={item.routerName}
+        className={`flex items-center rounded-lg px-4 py-3 text-base font-medium transition-all duration-300 ${active
+          ? "border border-blue-500/30 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400"
+          : "text-white/70 hover:bg-white/10 hover:text-white"
+          }`}
+      >
+        <Icon size={18} className="mr-3" />
+        {item.label}
+      </Link>
+      </motion.div>
+    }
+
+    return <Link
+      key={item.routerName}
+      to={item.routerName}
+      className={`group relative inline-flex h-9 items-center justify-center whitespace-nowrap rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ${active
+        ? "bg-blue-400/10 text-blue-400 shadow-lg shadow-blue-400/20"
+        : "text-white/70 hover:bg-white/10 hover:text-white"
+        }`}
+    >
+      <Icon size={16} className="relative z-10 mr-2" />
+      <span className="relative z-10">{item.label}</span>
+      {active && (
+        <motion.div
+          layoutId="activeTab"
+          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+          className="absolute inset-0 rounded-lg border border-blue-500/30 bg-gradient-to-r from-blue-500/20 to-purple-500/20"
+        />
       )}
-    </button>
+    </Link>
   }
 
-  useEffect(() => {
-    const firstLetter = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
-    setCurrentSection(window.location.pathname === "/" ? "Home" : firstLetter(window.location.pathname.substring(1)))
-  }, [window.location.pathname])
   return <>
-    {NAVITEMS.map((item) => renderNavItem(item))}
+    {NAVITEMS.map((item, index) => renderNavItem(item, index))}
   </>
 }
 export default NavItems;

@@ -1,49 +1,39 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Loader from "./components/Loader";
+import Background from "./components/Background";
 import MainSection from "./components/MainSection";
-import { Routes, Route } from "react-router-dom";
-import HeroSection from "./components/MainSection/HeroSection";
 import ExperienceSection from "./components/MainSection/ExperienceSection";
-import ContactSection from "./components/MainSection/ContactSection";
 import ProjectsSection from "./components/MainSection/ProjectsSection";
 import ContactPage from "./components/Contact";
 import Education from "./components/Education";
+import CertificationsPage from "./components/Certifications";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [color, setColor] = useState(0);
+  const { pathname } = useLocation();
 
-  const scrollToSection = (section: string) => {
-    const id = section.toLowerCase();
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
-
-    setMobileMenu(false);
-  };
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
 
   return (
-    <div
-      className={`min-h-screen transition-colors duration-300 
-        ${darkMode ? "bg-[#171412] text-white" : "bg-[#faf9f7] text-[#171513]"
-        }`}
-    >
-      <Header
-        scrollToSection={scrollToSection}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-        mobileMenu={mobileMenu}
-        setMobileMenu={setMobileMenu} />
-      <Routes>
-        <Route path="/" element={<HeroSection scrollToSection={scrollToSection} />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/experience" element={<ExperienceSection />} />
-        <Route path="/projects" element={<ProjectsSection />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-      {/* <MainSection scrollToSection={scrollToSection} /> */}
+    <div className="flex min-h-screen flex-col bg-black text-white selection:bg-blue-500/30">
+      <Loader />
+      <Background />
+      <Header />
+      <main key={pathname} className="relative z-10 flex-1">
+        <Routes>
+          <Route path="/" element={<MainSection />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<ExperienceSection />} />
+          <Route path="/projects" element={<ProjectsSection />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<MainSection />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
