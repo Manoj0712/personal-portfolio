@@ -21,17 +21,17 @@ export const platforms: Platform[] = [
 
 // TODO: replace with your real degree details.
 export const educationList: EducationItem[] = [{
-  institution: "Your College Name",
-  degree: "Your Degree (e.g. B.E. Computer Science and Engineering)",
-  period: "20XX - 20XX",
-  location: "Tamil Nadu, India",
-  grade: "Your Grade / CGPA",
+  institution: "Sri Ramakrishna Mission Vidyalaya College of Arts and Science, Coimbatore",
+  degree: "B.sc(Information Technology)",
+  period: "2018 - 2021",
+  location: "Coimbatore, Tamil Nadu, India",
+  grade: "First Class / 7.67 CGPA",
   status: "Completed",
   description:
     "Studied computer science fundamentals and built a strong foundation in programming, databases and web development.",
   highlights: [
     "Studied core subjects like Data Structures, Algorithms, DBMS, Operating Systems and Computer Networks.",
-    "Built projects in web development using JavaScript, Java and SQL.",
+    "Built projects in web development using JavaScript,React,Java,Springboot,Node and Postgresql,SQL.",
     "Started my professional career as a Software Developer at Vyoog Information Private Limited.",
   ],
   achievements: [

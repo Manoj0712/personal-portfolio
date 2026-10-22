@@ -30,6 +30,22 @@ import {
 import { LuGraduationCap } from "react-icons/lu";
 
 
+export const DURATION = 4200;
+export const LOADER_DELAY = [0, 0.6, 1.2]
+
+export const TERMINAL_LINES = [
+  { text: "initializing portfolio...", color: "#a78bfa", delay: 1.8 },
+  { text: "loading experience.tsx", color: "#67e8f9", delay: 2.3 },
+  { text: "compiling projects...", color: "#86efac", delay: 2.8 },
+  { text: "ready ✓", color: "#4ade80", delay: 3.4 },
+];
+
+export const ORBITS = [
+  { radius: 90, duration: 6, color: "#8B5CF6", dots: 6, reverse: false },
+  { radius: 130, duration: 8, color: "#06B6D4", dots: 8, reverse: true },
+  { radius: 170, duration: 10, color: "#3B82F6", dots: 5, reverse: false },
+];
+
 export const NAME = "Manojkumar S";
 export const SHORT_NAME = "Manojkumar";
 export const DETAILS = {
@@ -248,6 +264,7 @@ export const SKILLGROUP: SkillGroupProps[] = [
       "Next.js",
       "Tailwind CSS",
       "React Query",
+      "Redux Toolkit",
     ]
   }, {
     title: "Backend",
