@@ -28,6 +28,7 @@ import {
   FiZap,
 } from "react-icons/fi";
 import { LuGraduationCap } from "react-icons/lu";
+import { Variants } from "framer-motion";
 
 
 export const DURATION = 4200;
@@ -367,3 +368,16 @@ export const FAQS: FaqProps[] = [
     a: "Yes, I can help with code reviews, debugging, performance optimization, and feature development on existing projects.",
   },
 ];
+
+
+export const CONTAINER: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+};
+
+export const ITEM: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+export const LABEL = "mb-3 text-sm font-semibold uppercase tracking-wider text-white/40";
