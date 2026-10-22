@@ -4,7 +4,7 @@ import { CERTIFICATIONS_CTA } from "@/constrains";
 import SectionHeading from "../SectionHeading";
 import CallToAction from "../CallToAction";
 import Certifications from "../Education/Certifications";
-import { validatedSkills } from "../Education/education";
+import { validatedSkills } from "../../constrains/education";
 
 const CertificationsPage = () => {
 

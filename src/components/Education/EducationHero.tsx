@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { platforms } from "./education";
+import { platforms } from "../../constrains/education";
+import { map } from "lodash";
 
 export default function EducationHero() {
   return (
@@ -25,7 +26,7 @@ export default function EducationHero() {
               Basic Qualification and Certifications
             </p>
             <div className="flex flex-wrap gap-4">
-              {platforms.map(({ name, url, logo, invert }) => (
+              {map(platforms, ({ name, url, logo, invert }) => (
                 <motion.a key={name} href={url} target="_blank" rel="noreferrer" aria-label={name}
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}

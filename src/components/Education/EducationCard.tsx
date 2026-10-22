@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { educationList } from "./education";
+import { educationList } from "../../constrains/education";
 import { map } from "lodash";
 import KeyHighlights from "./KeyHighlights";
 import Achievements from "./Achievements";
