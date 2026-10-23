@@ -1,5 +1,5 @@
 import { ORBITS } from "@/constrains";
-import { seeded } from "@/helper/LoaderHelper";
+import { seeded } from "@/helper/loaderHelper";
 import { map } from "lodash";
 import { useMemo } from "react";
 
