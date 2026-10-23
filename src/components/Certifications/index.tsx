@@ -5,6 +5,7 @@ import SectionHeading from "../SectionHeading";
 import CallToAction from "../CallToAction";
 import Certifications from "../Education/Certifications";
 import { validatedSkills } from "../../constrains/education";
+import { map } from "lodash";
 
 const CertificationsPage = () => {
 
@@ -31,7 +32,7 @@ const CertificationsPage = () => {
             <p className="mx-auto max-w-xl text-white/60">Core competencies backed by real-world experience</p>
           </motion.div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-            {validatedSkills.map(({ badge, label }, index) => (
+            {map(validatedSkills, ({ badge, label }, index) => (
               <motion.div
                 key={label}
                 initial={{ opacity: 0, y: 20 }}

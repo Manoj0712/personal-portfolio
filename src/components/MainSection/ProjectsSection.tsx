@@ -21,7 +21,7 @@ const ProjectsSection = () => {
         description="A collection of projects focused on performance, usability and scalable architecture"
       >
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-          {stats.map(({ value, label, delay }) => (
+          {map(stats, ({ value, label, delay }) => (
             <motion.div
               key={label}
               initial={{ opacity: 0, y: 20 }}

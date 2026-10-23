@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Loader from "./components/Loader";
 import Background from "./components/Background";
 import MainSection from "./components/MainSection";
-import ExperienceSection from "./components/MainSection/ExperienceSection";
+import ExperienceSection from "./components/ExperienceCard/ExperienceSection";
 import ProjectsSection from "./components/MainSection/ProjectsSection";
 import ContactPage from "./components/Contact";
 import Education from "./components/Education";
@@ -25,7 +25,8 @@ function App() {
       <Header />
       <main key={pathname} className="relative z-10 flex-1">
         <Routes>
-          <Route path="/" element={<MainSection />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<MainSection />} />
           <Route path="/education" element={<Education />} />
           <Route path="/experience" element={<ExperienceSection />} />
           <Route path="/projects" element={<ProjectsSection />} />

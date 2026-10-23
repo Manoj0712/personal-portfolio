@@ -2,7 +2,7 @@ import { map } from "lodash";
 import { motion } from "framer-motion";
 import { FiBriefcase } from "react-icons/fi";
 import { EXPERIENCE_CTA, EXPERIENCECARD, SKILLGROUP } from "@/constrains";
-import ExperienceCard from "../ExperienceCard";
+import ExperienceCard from ".";
 import SectionHeading from "../SectionHeading";
 import SkillGroup from "../SkillGroup";
 import CallToAction from "../CallToAction";
@@ -57,7 +57,6 @@ const ExperienceSection = () => {
           </div>
         </div>
       </section>
-
       <CallToAction {...EXPERIENCE_CTA} />
     </div>
   )

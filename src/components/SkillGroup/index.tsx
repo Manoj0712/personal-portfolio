@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SkillGroupProps } from "@/types";
 import TechIcon from "../TechIcon";
+import { map } from "lodash";
 
 const SkillGroup = ({
   title,
@@ -23,7 +24,7 @@ const SkillGroup = ({
         </div>
 
         <div className="flex flex-1 flex-wrap gap-3">
-          {skills.map((skill, i) => (
+          {map(skills, (skill, i) => (
             <motion.div
               key={skill}
               initial={{ opacity: 0, scale: 0.8 }}
