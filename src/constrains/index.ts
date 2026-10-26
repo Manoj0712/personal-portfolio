@@ -195,7 +195,8 @@ export const EXPERIENCECARD: ExperienceCardProps[] = [{
     "Redux Toolkit",
     "tylertech/forge",
     "Bootstrap",
-    "CSS"
+    "CSS",
+    "Node.js"
   ],
 },
 {
@@ -207,20 +208,23 @@ export const EXPERIENCECARD: ExperienceCardProps[] = [{
   type: "Full-time",
   logo: "VY",
   color: "from-green-500 to-teal-600",
-  description: `Developed and maintained enterprise ERP applications using Groovy, Grails,
-  PostgreSQL and Java-based technologies.`,
+  description: `Developed and maintained enterprise ERP applications using React.js, Spring Boot, Groovy, Grails, PostgreSQL, and Java-based technologies.`,
   responsibilities: [
-    "Developed and maintained enterprise ERP applications using Groovy, Grails, PostgreSQL and Java",
+    "Developed and maintained enterprise ERP applications using React.js, Spring Boot, Groovy, Grails, PostgreSQL and Java",
     "Designed and optimized backend workflows, reporting queries and database operations",
     "Reduced PostgreSQL query execution time by ~25%",
     "Contributed to modernizing legacy applications by migrating backend functionality to Spring Boot",
   ],
   technologies: [
     "Java",
+    "Spring Boot",
     "Groovy",
     "Grails",
     "PostgreSQL",
-    "Spring Boot",
+    "React.js",
+    "Thymeleaf",
+    "Bootstrap",
+    "CSS"
   ],
 }];
 
