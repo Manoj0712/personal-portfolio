@@ -98,7 +98,7 @@ const Loader = () => {
             }}
           />
         </div>
-        <span className="mt-2 font-mono text-[10px] text-gray-500">{Math.round(progress)}%</span>
+        <span className="mt-2 font-mono text-[9px] text-gray-500">{Math.round(progress)}%</span>
       </div>
       {/* Corner brackets */}
       <CornerBrackets />

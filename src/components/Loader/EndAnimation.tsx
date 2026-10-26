@@ -10,7 +10,7 @@ const EndAnimation = () => {
         <div className="h-2 w-2 rounded-full bg-red-400/80" />
         <div className="h-2 w-2 rounded-full bg-yellow-400/80" />
         <div className="h-2 w-2 rounded-full bg-green-400/80" />
-        <span className="ml-2 font-mono text-[10px] text-gray-500">terminal</span>
+        <span className="ml-2 font-mono text-[9px] text-gray-500">terminal</span>
       </div>
       <div className="space-y-1.5">
         {map(TERMINAL_LINES, (line) => (

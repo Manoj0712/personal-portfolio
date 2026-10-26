@@ -15,7 +15,7 @@ const StartAnimation = () => {
           </span>
         ))}
       </h1>
-      <p className="mt-2 text-[11px] uppercase tracking-[0.5em] text-gray-400 sm:text-xs">
+      <p className="mt-2 text-[10px] uppercase tracking-[0.5em] text-gray-400 sm:text-xs">
         {DETAILS.title}
       </p>
     </div>
