@@ -11,8 +11,7 @@ import type {
   TechIconProps,
   WhatIDoProps,
 } from "@/types";
-import ProfileImage from "@/assets/ManojImage.png";
-// import ManojImage from "@/assets/ManojImage.png"
+import ProfileImage from "@/assets/profile.jpg";
 import {
   FiBriefcase,
   FiClock,
