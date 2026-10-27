@@ -11,7 +11,8 @@ import type {
   TechIconProps,
   WhatIDoProps,
 } from "@/types";
-import ManojImage from "@/assets/ManojImage.png"
+import ProfileImage from "@/assets/ManojImage.png";
+// import ManojImage from "@/assets/ManojImage.png"
 import {
   FiBriefcase,
   FiClock,
@@ -71,7 +72,7 @@ export const DETAILS = {
   footerBio: `Full Stack Developer building scalable web applications with React,
   TypeScript, Node.js and Java. Passionate about clean code and great user experiences.`,
   location: "Coimbatore, Tamil Nadu-641670, India",
-  image: ManojImage,
+  image: ProfileImage,
   mail: "manojkumars435980@gmail.com",
   resume: "/resume/Manojkumar-S-Resume.pdf",
 }
