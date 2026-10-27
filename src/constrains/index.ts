@@ -79,7 +79,7 @@ export const DETAILS = {
 export const RIGHTS = `© ${new Date().getFullYear()} ${NAME}. Made with`;
 
 export const NAVITEMS: NavItemsProps[] = [
-  { label: "Home", icon: FiHome, routerName: "/" },
+  { label: "Home", icon: FiHome, routerName: "/home" },
   { label: "Education", icon: LuGraduationCap, routerName: "/education" },
   { label: "Experience", icon: FiBriefcase, routerName: "/experience" },
   { label: "Projects", icon: FiCode, routerName: "/projects" },
@@ -172,7 +172,7 @@ export const EXPERIENCECARD: ExperienceCardProps[] = [{
   role: "Frontend Developer",
   period: "Mar 2025 - Apr 2026",
   location: "Coimbatore",
-  sector: "Software",
+  sector: "Financial Software",
   type: "Full-time",
   logo: "EI",
   color: "from-purple-500 to-blue-600",
