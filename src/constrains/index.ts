@@ -70,7 +70,7 @@ export const DETAILS = {
   and building products that deliver great performance and user experiences.`,
   footerBio: `Full Stack Developer building scalable web applications with React,
   TypeScript, Node.js and Java. Passionate about clean code and great user experiences.`,
-  location: "Tiruppur, Tamil Nadu-641670, India",
+  location: "Coimbatore, Tamil Nadu-641670, India",
   image: ManojImage,
   mail: "manojkumars435980@gmail.com",
   resume: "/resume/Manojkumar-S-Resume.pdf",
